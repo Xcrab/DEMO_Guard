@@ -1,0 +1,344 @@
+    /* "code.sol":25:436  contract test{... */
+  mstore(0x40, 0x80)
+  callvalue
+    /* "--CODEGEN--":8:17   */
+  dup1
+    /* "--CODEGEN--":5:7   */
+  iszero
+  tag_1
+  jumpi
+    /* "--CODEGEN--":30:31   */
+  0x0
+    /* "--CODEGEN--":27:28   */
+  dup1
+    /* "--CODEGEN--":20:32   */
+  revert
+    /* "--CODEGEN--":5:7   */
+tag_1:
+    /* "code.sol":25:436  contract test{... */
+  pop
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "code.sol":25:436  contract test{... */
+      mstore(0x40, 0x80)
+      jumpi(tag_1, lt(calldatasize, 0x4))
+      calldataload(0x0)
+      0x100000000000000000000000000000000000000000000000000000000
+      swap1
+      div
+      0xffffffff
+      and
+      dup1
+      0x6b59084d
+      eq
+      tag_2
+      jumpi
+      dup1
+      0xe90c0f2c
+      eq
+      tag_3
+      jumpi
+      dup1
+      0xf7adc48f
+      eq
+      tag_4
+      jumpi
+    tag_1:
+      0x0
+      dup1
+      revert
+        /* "code.sol":99:226  function test1() public payable {... */
+    tag_2:
+      tag_5
+      jump(tag_6)
+    tag_5:
+      stop
+        /* "code.sol":44:92  mapping (address => uint256) public tokenbalance */
+    tag_3:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_7
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_7:
+        /* "code.sol":44:92  mapping (address => uint256) public tokenbalance */
+      pop
+      tag_8
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_9)
+    tag_8:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":233:434  function test3(uint256 value) public{... */
+    tag_4:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_10
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_10:
+        /* "code.sol":233:434  function test3(uint256 value) public{... */
+      pop
+      tag_11
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_12)
+    tag_11:
+      stop
+        /* "code.sol":99:226  function test1() public payable {... */
+    tag_6:
+        /* "code.sol":156:157  0 */
+      0x0
+        /* "code.sol":144:153  msg.value */
+      callvalue
+        /* "code.sol":144:157  msg.value > 0 */
+      gt
+        /* "code.sol":141:220  if(msg.value > 0){... */
+      iszero
+      tag_14
+      jumpi
+        /* "code.sol":200:209  msg.value */
+      callvalue
+        /* "code.sol":172:184  tokenbalance */
+      0x0
+        /* "code.sol":172:196  tokenbalance[msg.sender] */
+      dup1
+        /* "code.sol":185:195  msg.sender */
+      caller
+        /* "code.sol":172:196  tokenbalance[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      0x0
+        /* "code.sol":172:209  tokenbalance[msg.sender] += msg.value */
+      dup3
+      dup3
+      sload
+      add
+      swap3
+      pop
+      pop
+      dup2
+      swap1
+      sstore
+      pop
+        /* "code.sol":141:220  if(msg.value > 0){... */
+    tag_14:
+        /* "code.sol":99:226  function test1() public payable {... */
+      jump	// out
+        /* "code.sol":44:92  mapping (address => uint256) public tokenbalance */
+    tag_9:
+      mstore(0x20, 0x0)
+      dup1
+      0x0
+      mstore
+      keccak256(0x0, 0x40)
+      0x0
+      swap2
+      pop
+      swap1
+      pop
+      sload
+      dup2
+      jump	// out
+        /* "code.sol":233:434  function test3(uint256 value) public{... */
+    tag_12:
+        /* "code.sol":310:315  value */
+      dup1
+        /* "code.sol":283:295  tokenbalance */
+      0x0
+        /* "code.sol":283:307  tokenbalance[msg.sender] */
+      dup1
+        /* "code.sol":296:306  msg.sender */
+      caller
+        /* "code.sol":283:307  tokenbalance[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":283:315  tokenbalance[msg.sender] > value */
+      gt
+        /* "code.sol":279:428  if (tokenbalance[msg.sender] > value) {... */
+      iszero
+      tag_16
+      jumpi
+        /* "code.sol":339:349  msg.sender */
+      caller
+        /* "code.sol":339:354  msg.sender.call */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":361:366  value */
+      dup2
+        /* "code.sol":339:369  msg.sender.call.value(value)() */
+      mload(0x40)
+      0x0
+      mload(0x40)
+      dup1
+      dup4
+      sub
+      dup2
+      dup6
+      dup8
+      gas
+      call
+      swap3
+      pop
+      pop
+      pop
+        /* "code.sol":331:370  require(msg.sender.call.value(value)()) */
+      iszero
+      iszero
+      tag_17
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_17:
+        /* "code.sol":412:417  value */
+      dup1
+        /* "code.sol":384:396  tokenbalance */
+      0x0
+        /* "code.sol":384:408  tokenbalance[msg.sender] */
+      dup1
+        /* "code.sol":397:407  msg.sender */
+      caller
+        /* "code.sol":384:408  tokenbalance[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      0x0
+        /* "code.sol":384:417  tokenbalance[msg.sender] -= value */
+      dup3
+      dup3
+      sload
+      sub
+      swap3
+      pop
+      pop
+      dup2
+      swap1
+      sstore
+      pop
+        /* "code.sol":279:428  if (tokenbalance[msg.sender] > value) {... */
+    tag_16:
+        /* "code.sol":233:434  function test3(uint256 value) public{... */
+      pop
+      jump	// out
+
+    auxdata: 0xa165627a7a72305820571b6970f490fd5f3d313c1f0c5cdb694b3376bf2e23389a642fa957897cb9bb0029
+}
