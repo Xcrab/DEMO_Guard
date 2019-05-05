@@ -28,10 +28,10 @@ if os.path.exists(os.path.abspath('.') + "/build"):
 truffle_compile = "truffle compile"
 os.system(truffle_compile)
 
-ast_json = getJsonData(("./build/contracts/" + target_contract + ".json"))
-ast_json["bytecode"] = bytecode
-ast_json["deployedBytecode"] = deployedBytecode
-writeJsonData(ast_json, ("./build/contracts/" + target_contract + ".json"))
+# ast_json = getJsonData(("./build/contracts/" + target_contract + ".json"))
+# ast_json["bytecode"] = bytecode
+# ast_json["deployedBytecode"] = deployedBytecode
+# writeJsonData(ast_json, ("./build/contracts/" + target_contract + ".json"))
 
 truffle_test_cmd = "truffle test --network test"
 os.system(truffle_test_cmd)
