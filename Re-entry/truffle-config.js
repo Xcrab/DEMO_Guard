@@ -1,5 +1,5 @@
 module.exports = {
-	networks: {
+    networks: {
         test: {
             host: "localhost",
             port: 8500,

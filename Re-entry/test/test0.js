@@ -1,11 +1,10 @@
 const test = artifacts.require("test");
 contract('EtherStore', async (accounts) => {
     const owner = accounts[0];
-    let attack;
     let instance;
-    let result;
     before('setup contract for each test', async () => {
         instance = await test.new({from: accounts[0]});
+        console.log("contract_name:test:" + instance.address)
     });
     it('test 0', async () => {
         await instance.test1({from: accounts[0], value: web3.utils.toWei(web3.utils.toBN(1))});
