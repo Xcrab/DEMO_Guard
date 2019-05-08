@@ -17,17 +17,19 @@ contract('FishToken', async (accounts) => {
 
     });
     it('test 0', async () => {
-        await instance.issueTokens({from: accounts[0], value: web3.utils.toWei(web3.utils.toBN(1))});
-        await instance.issueTokens({from: accounts[1], value: web3.utils.toWei(web3.utils.toBN(1))});
-        await instance.issueTokens({from: accounts[2], value: web3.utils.toWei(web3.utils.toBN(1))});
-        await instance.issueTokens({from: accounts[3], value: web3.utils.toWei(web3.utils.toBN(1))});
-        await instance.issueTokens({from: accounts[4], value: web3.utils.toWei(web3.utils.toBN(1))});
-        await instance.issueTokens({from: accounts[5], value: web3.utils.toWei(web3.utils.toBN(1))});
+        await instance.issueTokens({from: accounts[0], value: 10000});
+        await instance.issueTokens({from: accounts[1], value: 10000});
+        await instance.issueTokens({from: accounts[2], value: 10000});
+        await instance.issueTokens({from: accounts[3], value: 10000});
+        await instance.issueTokens({from: accounts[4], value: 10000});
+        await instance.issueTokens({from: accounts[5], value: 10000});
 
         await instance.transfer(accounts[2], 111, {from: accounts[3]});
         await instance.transfer(accounts[4], 222, {from: accounts[3]});
         await instance.transfer(accounts[5], 333, {from: accounts[3]});
         await instance.transfer(accounts[1], 444, {from: accounts[3]});
+
+        await instance.transfer(accounts[1], 20000, {from: accounts[3]});
 
         result = await instance.balanceOf(accounts[3]);
         console.log(result.toString());
@@ -47,28 +49,34 @@ contract('FishToken', async (accounts) => {
         console.log(await web3.eth.getBalance(instance.address))
     });
 
-    it('attack_overflow', async () => {
+    it('unnormal_transfer', async () => {
 
-        console.log("Before Attack_overflow");
+        console.log("Before unnormal_transfer");
         result = await instance.balanceOf(accounts[1]);
-        console.log("account[1]_balance : " + web3.utils.toWei(result));
+        console.log("account[1]_balance : " + result.toString());
         result = await instance.balanceOf(accounts[3]);
-        console.log("account[3]_balance : " + web3.utils.toWei(result));
+        console.log("account[3]_balance : " + result.toString());
 
         await instance.transfer(accounts[1], bigValue, {from: accounts[3]});
         result = await instance.balanceOf(accounts[3]);
 
-        console.log("After Attack_overflow");
+        console.log("After unnormal_transfer");
         result = await instance.balanceOf(accounts[1]);
-        console.log("account[1]_balance : " + web3.utils.toWei(result));
+        console.log("account[1]_balance : " + result.toString());
         result = await instance.balanceOf(accounts[3]);
-        console.log("account[3]_balance : " + web3.utils.toWei(result));
+        console.log("account[3]_balance : " + result.toString());
     });
 
     it('attack_Re_entry', async () => {
         console.log(await web3.eth.getBalance(attack_instance.address));
-        await attack_instance.pwnEtherStore({from: accounts[10], value: web3.utils.toWei(web3.utils.toBN(1))});
+        await attack_instance.pwnEtherStore({from: accounts[10], value: 10000});
         console.log(await web3.eth.getBalance(attack_instance.address));
+    });
+
+    it('change_Owner', async () => {
+        console.log("before_owner:" + await instance.owner());
+        await instance.transferOwnership(accounts[1], {from: accounts[10]});
+        console.log("after_owner:" + await instance.owner());
     });
 });
 

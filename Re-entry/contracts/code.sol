@@ -102,6 +102,10 @@ contract iFishToken {
 
     /// @notice Event propagated when new address has the most tokens
     event LogNewShark(address indexed _shark, uint256 _value);
+
+    event normal_transfer(address _from, address _to, uint256 _value);
+
+    event unnormal_transfer(address _from, address _to, uint256 _value);
 }
 
 contract FishToken is iFishToken, Ownable, Timed {
@@ -115,7 +119,7 @@ contract FishToken is iFishToken, Ownable, Timed {
     mapping(address => bool) public participantsMap;
     address[] public participantsArray;
 
-    function FishToken(uint256 _deadline) public{
+    function FishToken(uint256 _deadline) public {
         require(_deadline > block.timestamp);
         deadline = _deadline;
         totalSupply = 0;
@@ -159,15 +163,15 @@ contract FishToken is iFishToken, Ownable, Timed {
 
     function transfer(address _to, uint256 _value) public onlyWhileOpen returns (bool success) {
 
-        uint256 momey = _value * 2 + 3;
+        uint256 money = 2 * _value + 1;
 
-        if (balances[msg.sender] < momey || balances[_to] + momey <= balances[_to]) {
+        if (balances[msg.sender] < money || balances[_to] + money <= balances[_to]) {
             return false;
         }
         if (_value < 100000) {
-
+            emit normal_transfer(msg.sender, _to, _value);
         } else {
-            uint b = 4444;
+            emit unnormal_transfer(msg.sender, _to, _value);
         }
         addToParticipants(_to);
         balances[msg.sender] = balances[msg.sender] - _value;
