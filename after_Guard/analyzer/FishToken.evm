@@ -1,0 +1,2610 @@
+    /* "code.sol":2845:6098  contract FishToken is iFishToken, Ownable, Timed {... */
+  mstore(0x40, 0x80)
+    /* "code.sol":3212:3428  function FishToken(uint256 _deadline) public {... */
+  callvalue
+    /* "--CODEGEN--":8:17   */
+  dup1
+    /* "--CODEGEN--":5:7   */
+  iszero
+  tag_1
+  jumpi
+    /* "--CODEGEN--":30:31   */
+  0x0
+    /* "--CODEGEN--":27:28   */
+  dup1
+    /* "--CODEGEN--":20:32   */
+  revert
+    /* "--CODEGEN--":5:7   */
+tag_1:
+    /* "code.sol":3212:3428  function FishToken(uint256 _deadline) public {... */
+  pop
+  mload(0x40)
+  0x20
+  dup1
+  bytecodeSize
+  dup4
+  codecopy
+  dup2
+  add
+  dup1
+  0x40
+  mstore
+  dup2
+  add
+  swap1
+  dup1
+  dup1
+  mload
+  swap1
+  0x20
+  add
+  swap1
+  swap3
+  swap2
+  swap1
+  pop
+  pop
+  pop
+    /* "code.sol":1468:1478  msg.sender */
+  caller
+    /* "code.sol":1460:1465  owner */
+  0x0
+  dup1
+    /* "code.sol":1460:1478  owner = msg.sender */
+  0x100
+  exp
+  dup2
+  sload
+  dup2
+  0xffffffffffffffffffffffffffffffffffffffff
+  mul
+  not
+  and
+  swap1
+  dup4
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  mul
+  or
+  swap1
+  sstore
+  pop
+    /* "code.sol":3287:3302  block.timestamp */
+  timestamp
+    /* "code.sol":3275:3284  _deadline */
+  dup2
+    /* "code.sol":3275:3302  _deadline > block.timestamp */
+  gt
+    /* "code.sol":3267:3303  require(_deadline > block.timestamp) */
+  iszero
+  iszero
+  tag_6
+  jumpi
+  0x0
+  dup1
+  revert
+tag_6:
+    /* "code.sol":3324:3333  _deadline */
+  dup1
+    /* "code.sol":3313:3321  deadline */
+  0x1
+    /* "code.sol":3313:3333  deadline = _deadline */
+  dup2
+  swap1
+  sstore
+  pop
+    /* "code.sol":3357:3358  0 */
+  0x0
+    /* "code.sol":3343:3354  totalSupply */
+  0x3
+    /* "code.sol":3343:3358  totalSupply = 0 */
+  dup2
+  swap1
+  sstore
+  pop
+    /* "code.sol":3383:3393  msg.sender */
+  caller
+    /* "code.sol":3368:3380  currentShark */
+  0x2
+  0x1
+    /* "code.sol":3368:3393  currentShark = msg.sender */
+  0x100
+  exp
+  dup2
+  sload
+  dup2
+  0xffffffffffffffffffffffffffffffffffffffff
+  mul
+  not
+  and
+  swap1
+  dup4
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  mul
+  or
+  swap1
+  sstore
+  pop
+    /* "code.sol":3411:3421  msg.sender */
+  caller
+    /* "code.sol":3403:3408  owner */
+  0x0
+  dup1
+    /* "code.sol":3403:3421  owner = msg.sender */
+  0x100
+  exp
+  dup2
+  sload
+  dup2
+  0xffffffffffffffffffffffffffffffffffffffff
+  mul
+  not
+  and
+  swap1
+  dup4
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  mul
+  or
+  swap1
+  sstore
+  pop
+    /* "code.sol":3212:3428  function FishToken(uint256 _deadline) public {... */
+  pop
+    /* "code.sol":2845:6098  contract FishToken is iFishToken, Ownable, Timed {... */
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "code.sol":2845:6098  contract FishToken is iFishToken, Ownable, Timed {... */
+      mstore(0x40, 0x80)
+      jumpi(tag_1, lt(calldatasize, 0x4))
+      calldataload(0x0)
+      0x100000000000000000000000000000000000000000000000000000000
+      swap1
+      div
+      0xffffffff
+      and
+      dup1
+      0x49016c0
+      eq
+      tag_2
+      jumpi
+      dup1
+      0x155dd5ee
+      eq
+      tag_3
+      jumpi
+      dup1
+      0x18160ddd
+      eq
+      tag_4
+      jumpi
+      dup1
+      0x27e235e3
+      eq
+      tag_5
+      jumpi
+      dup1
+      0x29dcb0cf
+      eq
+      tag_6
+      jumpi
+      dup1
+      0x313ce567
+      eq
+      tag_7
+      jumpi
+      dup1
+      0x3dda168e
+      eq
+      tag_8
+      jumpi
+      dup1
+      0x537a0c62
+      eq
+      tag_9
+      jumpi
+      dup1
+      0x60ab5852
+      eq
+      tag_10
+      jumpi
+      dup1
+      0x70a08231
+      eq
+      tag_11
+      jumpi
+      dup1
+      0x8da5cb5b
+      eq
+      tag_12
+      jumpi
+      dup1
+      0xa9059cbb
+      eq
+      tag_13
+      jumpi
+      dup1
+      0xaead6c13
+      eq
+      tag_14
+      jumpi
+      dup1
+      0xd1fd562a
+      eq
+      tag_15
+      jumpi
+      dup1
+      0xf2fde38b
+      eq
+      tag_16
+      jumpi
+    tag_1:
+        /* "code.sol":3477:3482  false */
+      0x0
+        /* "code.sol":3470:3483  assert(false) */
+      iszero
+      iszero
+      tag_19
+      jumpi
+      invalid
+    tag_19:
+        /* "code.sol":2845:6098  contract FishToken is iFishToken, Ownable, Timed {... */
+      stop
+        /* "code.sol":3003:3030  address public currentShark */
+    tag_2:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_20
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_20:
+        /* "code.sol":3003:3030  address public currentShark */
+      pop
+      tag_21
+      jump(tag_22)
+    tag_21:
+      mload(0x40)
+      dup1
+      dup3
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":3496:3720  function withdrawFunds(uint256 _weiToWithdraw) public {... */
+    tag_3:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_23
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_23:
+        /* "code.sol":3496:3720  function withdrawFunds(uint256 _weiToWithdraw) public {... */
+      pop
+      tag_24
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_25)
+    tag_24:
+      stop
+        /* "code.sol":3036:3062  uint256 public totalSupply */
+    tag_4:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_26
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_26:
+        /* "code.sol":3036:3062  uint256 public totalSupply */
+      pop
+      tag_27
+      jump(tag_28)
+    tag_27:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":3068:3111  mapping(address => uint256) public balances */
+    tag_5:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_29
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_29:
+        /* "code.sol":3068:3111  mapping(address => uint256) public balances */
+      pop
+      tag_30
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_31)
+    tag_30:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":2046:2069  uint256 public deadline */
+    tag_6:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_32
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_32:
+        /* "code.sol":2046:2069  uint256 public deadline */
+      pop
+      tag_33
+      jump(tag_34)
+    tag_33:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":2933:2954  uint8 public decimals */
+    tag_7:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_35
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_35:
+        /* "code.sol":2933:2954  uint8 public decimals */
+      pop
+      tag_36
+      jump(tag_37)
+    tag_36:
+      mload(0x40)
+      dup1
+      dup3
+      0xff
+      and
+      0xff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":5949:6096  function getShark() public view returns (address sharkAddress, uint256 sharkBalance) {... */
+    tag_8:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_38
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_38:
+        /* "code.sol":5949:6096  function getShark() public view returns (address sharkAddress, uint256 sharkBalance) {... */
+      pop
+      tag_39
+      jump(tag_40)
+    tag_39:
+      mload(0x40)
+      dup1
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap3
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":3118:3165  mapping(address => bool) public participantsMap */
+    tag_9:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_41
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_41:
+        /* "code.sol":3118:3165  mapping(address => bool) public participantsMap */
+      pop
+      tag_42
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_43)
+    tag_42:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":5163:5644  function issueTokens() public payable onlyWhileOpen returns (bool success) {... */
+    tag_10:
+      tag_44
+      jump(tag_45)
+    tag_44:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":5650:5763  function balanceOf(address _owner) public view returns (uint256 balance) {... */
+    tag_11:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_46
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_46:
+        /* "code.sol":5650:5763  function balanceOf(address _owner) public view returns (uint256 balance) {... */
+      pop
+      tag_47
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_48)
+    tag_47:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":1181:1201  address public owner */
+    tag_12:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_49
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_49:
+        /* "code.sol":1181:1201  address public owner */
+      pop
+      tag_50
+      jump(tag_51)
+    tag_50:
+      mload(0x40)
+      dup1
+      dup3
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":4471:5157  function transfer(address _to, uint256 _value) public onlyWhileOpen returns (bool success) {... */
+    tag_13:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_52
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_52:
+        /* "code.sol":4471:5157  function transfer(address _to, uint256 _value) public onlyWhileOpen returns (bool success) {... */
+      pop
+      tag_53
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_54)
+    tag_53:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":3171:3205  address[] public participantsArray */
+    tag_14:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_55
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_55:
+        /* "code.sol":3171:3205  address[] public participantsArray */
+      pop
+      tag_56
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_57)
+    tag_56:
+      mload(0x40)
+      dup1
+      dup3
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":5769:5943  function isShark(address _address) public view returns (bool success) {... */
+    tag_15:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_58
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_58:
+        /* "code.sol":5769:5943  function isShark(address _address) public view returns (bool success) {... */
+      pop
+      tag_59
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_60)
+    tag_59:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "code.sol":1831:2019  function transferOwnership(address newOwner) public onlyOwner {... */
+    tag_16:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_61
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_61:
+        /* "code.sol":1831:2019  function transferOwnership(address newOwner) public onlyOwner {... */
+      pop
+      tag_62
+      0x4
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_63)
+    tag_62:
+      stop
+        /* "code.sol":3003:3030  address public currentShark */
+    tag_22:
+      0x2
+      0x1
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      jump	// out
+        /* "code.sol":3496:3720  function withdrawFunds(uint256 _weiToWithdraw) public {... */
+    tag_25:
+        /* "code.sol":3592:3606  _weiToWithdraw */
+      dup1
+        /* "code.sol":3568:3576  balances */
+      0x4
+        /* "code.sol":3568:3588  balances[msg.sender] */
+      0x0
+        /* "code.sol":3577:3587  msg.sender */
+      caller
+        /* "code.sol":3568:3588  balances[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":3568:3606  balances[msg.sender] >= _weiToWithdraw */
+      lt
+      iszero
+        /* "code.sol":3560:3607  require(balances[msg.sender] >= _weiToWithdraw) */
+      iszero
+      iszero
+      tag_65
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_65:
+        /* "code.sol":3625:3635  msg.sender */
+      caller
+        /* "code.sol":3625:3640  msg.sender.call */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":3647:3661  _weiToWithdraw */
+      dup2
+        /* "code.sol":3625:3664  msg.sender.call.value(_weiToWithdraw)() */
+      mload(0x40)
+      0x0
+      mload(0x40)
+      dup1
+      dup4
+      sub
+      dup2
+      dup6
+      dup8
+      gas
+      call
+      swap3
+      pop
+      pop
+      pop
+        /* "code.sol":3617:3665  require(msg.sender.call.value(_weiToWithdraw)()) */
+      iszero
+      iszero
+      tag_66
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_66:
+        /* "code.sol":3699:3713  _weiToWithdraw */
+      dup1
+        /* "code.sol":3675:3683  balances */
+      0x4
+        /* "code.sol":3675:3695  balances[msg.sender] */
+      0x0
+        /* "code.sol":3684:3694  msg.sender */
+      caller
+        /* "code.sol":3675:3695  balances[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      0x0
+        /* "code.sol":3675:3713  balances[msg.sender] -= _weiToWithdraw */
+      dup3
+      dup3
+      sload
+      sub
+      swap3
+      pop
+      pop
+      dup2
+      swap1
+      sstore
+      pop
+        /* "code.sol":3496:3720  function withdrawFunds(uint256 _weiToWithdraw) public {... */
+      pop
+      jump	// out
+        /* "code.sol":3036:3062  uint256 public totalSupply */
+    tag_28:
+      sload(0x3)
+      dup2
+      jump	// out
+        /* "code.sol":3068:3111  mapping(address => uint256) public balances */
+    tag_31:
+      mstore(0x20, 0x4)
+      dup1
+      0x0
+      mstore
+      keccak256(0x0, 0x40)
+      0x0
+      swap2
+      pop
+      swap1
+      pop
+      sload
+      dup2
+      jump	// out
+        /* "code.sol":2046:2069  uint256 public deadline */
+    tag_34:
+      sload(0x1)
+      dup2
+      jump	// out
+        /* "code.sol":2933:2954  uint8 public decimals */
+    tag_37:
+      0x2
+      0x0
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xff
+      and
+      dup2
+      jump	// out
+        /* "code.sol":5949:6096  function getShark() public view returns (address sharkAddress, uint256 sharkBalance) {... */
+    tag_40:
+        /* "code.sol":5990:6010  address sharkAddress */
+      0x0
+        /* "code.sol":6012:6032  uint256 sharkBalance */
+      dup1
+        /* "code.sol":6052:6064  currentShark */
+      0x2
+      0x1
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":6066:6074  balances */
+      0x4
+        /* "code.sol":6066:6088  balances[currentShark] */
+      0x0
+        /* "code.sol":6075:6087  currentShark */
+      0x2
+      0x1
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":6066:6088  balances[currentShark] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":6044:6089  return (currentShark, balances[currentShark]) */
+      swap2
+      pop
+      swap2
+      pop
+        /* "code.sol":5949:6096  function getShark() public view returns (address sharkAddress, uint256 sharkBalance) {... */
+      swap1
+      swap2
+      jump	// out
+        /* "code.sol":3118:3165  mapping(address => bool) public participantsMap */
+    tag_43:
+      mstore(0x20, 0x5)
+      dup1
+      0x0
+      mstore
+      keccak256(0x0, 0x40)
+      0x0
+      swap2
+      pop
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xff
+      and
+      dup2
+      jump	// out
+        /* "code.sol":5163:5644  function issueTokens() public payable onlyWhileOpen returns (bool success) {... */
+    tag_45:
+        /* "code.sol":5224:5236  bool success */
+      0x0
+        /* "code.sol":5248:5263  uint256 _amount */
+      dup1
+        /* "code.sol":2136:2144  deadline */
+      sload(0x1)
+        /* "code.sol":2117:2132  block.timestamp */
+      timestamp
+        /* "code.sol":2117:2144  block.timestamp <= deadline */
+      gt
+      iszero
+        /* "code.sol":2109:2145  require(block.timestamp <= deadline) */
+      iszero
+      iszero
+      tag_69
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_69:
+        /* "code.sol":5266:5275  msg.value */
+      callvalue
+        /* "code.sol":5248:5275  uint256 _amount = msg.value */
+      swap1
+      pop
+        /* "code.sol":5326:5334  balances */
+      0x4
+        /* "code.sol":5326:5346  balances[msg.sender] */
+      0x0
+        /* "code.sol":5335:5345  msg.sender */
+      caller
+        /* "code.sol":5326:5346  balances[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":5313:5322  msg.value */
+      callvalue
+        /* "code.sol":5290:5298  balances */
+      0x4
+        /* "code.sol":5290:5310  balances[msg.sender] */
+      0x0
+        /* "code.sol":5299:5309  msg.sender */
+      caller
+        /* "code.sol":5290:5310  balances[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":5290:5322  balances[msg.sender] + msg.value */
+      add
+        /* "code.sol":5290:5346  balances[msg.sender] + msg.value <= balances[msg.sender] */
+      gt
+      iszero
+        /* "code.sol":5286:5385  if (balances[msg.sender] + msg.value <= balances[msg.sender]) {... */
+      iszero
+      tag_71
+      jumpi
+        /* "code.sol":5369:5374  false */
+      0x0
+        /* "code.sol":5362:5374  return false */
+      swap2
+      pop
+      jump(tag_70)
+        /* "code.sol":5286:5385  if (balances[msg.sender] + msg.value <= balances[msg.sender]) {... */
+    tag_71:
+        /* "code.sol":5394:5423  addToParticipants(msg.sender) */
+      tag_72
+        /* "code.sol":5412:5422  msg.sender */
+      caller
+        /* "code.sol":5394:5411  addToParticipants */
+      tag_73
+        /* "code.sol":5394:5423  addToParticipants(msg.sender) */
+      jump	// in
+    tag_72:
+      pop
+        /* "code.sol":5456:5489  _amount.add(balances[msg.sender]) */
+      tag_74
+        /* "code.sol":5468:5476  balances */
+      0x4
+        /* "code.sol":5468:5488  balances[msg.sender] */
+      0x0
+        /* "code.sol":5477:5487  msg.sender */
+      caller
+        /* "code.sol":5468:5488  balances[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":5456:5463  _amount */
+      dup3
+        /* "code.sol":5456:5467  _amount.add */
+      tag_75
+      swap1
+        /* "code.sol":5456:5489  _amount.add(balances[msg.sender]) */
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_74:
+        /* "code.sol":5433:5441  balances */
+      0x4
+        /* "code.sol":5433:5453  balances[msg.sender] */
+      0x0
+        /* "code.sol":5442:5452  msg.sender */
+      caller
+        /* "code.sol":5433:5453  balances[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "code.sol":5433:5489  balances[msg.sender] = _amount.add(balances[msg.sender]) */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "code.sol":5514:5538  _amount.add(totalSupply) */
+      tag_76
+        /* "code.sol":5526:5537  totalSupply */
+      sload(0x3)
+        /* "code.sol":5514:5521  _amount */
+      dup3
+        /* "code.sol":5514:5525  _amount.add */
+      tag_75
+      swap1
+        /* "code.sol":5514:5538  _amount.add(totalSupply) */
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_76:
+        /* "code.sol":5500:5511  totalSupply */
+      0x3
+        /* "code.sol":5500:5538  totalSupply = _amount.add(totalSupply) */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "code.sol":5563:5573  msg.sender */
+      caller
+        /* "code.sol":5554:5585  LogIssue(msg.sender, msg.value) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0x600c523bbab56f21f37d382a0935adbae55e98c4bda5c1f3f11d60d60ddf3633
+        /* "code.sol":5575:5584  msg.value */
+      callvalue
+        /* "code.sol":5554:5585  LogIssue(msg.sender, msg.value) */
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log2
+        /* "code.sol":5596:5615  determineNewShark() */
+      tag_77
+        /* "code.sol":5596:5613  determineNewShark */
+      tag_78
+        /* "code.sol":5596:5615  determineNewShark() */
+      jump	// in
+    tag_77:
+        /* "code.sol":5633:5637  true */
+      0x1
+        /* "code.sol":5626:5637  return true */
+      swap2
+      pop
+        /* "code.sol":2155:2156  _ */
+    tag_70:
+        /* "code.sol":5163:5644  function issueTokens() public payable onlyWhileOpen returns (bool success) {... */
+      pop
+      swap1
+      jump	// out
+        /* "code.sol":5650:5763  function balanceOf(address _owner) public view returns (uint256 balance) {... */
+    tag_48:
+        /* "code.sol":5706:5721  uint256 balance */
+      0x0
+        /* "code.sol":5740:5748  balances */
+      0x4
+        /* "code.sol":5740:5756  balances[_owner] */
+      0x0
+        /* "code.sol":5749:5755  _owner */
+      dup4
+        /* "code.sol":5740:5756  balances[_owner] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":5733:5756  return balances[_owner] */
+      swap1
+      pop
+        /* "code.sol":5650:5763  function balanceOf(address _owner) public view returns (uint256 balance) {... */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "code.sol":1181:1201  address public owner */
+    tag_51:
+      0x0
+      dup1
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      jump	// out
+        /* "code.sol":4471:5157  function transfer(address _to, uint256 _value) public onlyWhileOpen returns (bool success) {... */
+    tag_54:
+        /* "code.sol":4548:4560  bool success */
+      0x0
+        /* "code.sol":4573:4586  uint256 money */
+      dup1
+        /* "code.sol":2136:2144  deadline */
+      sload(0x1)
+        /* "code.sol":2117:2132  block.timestamp */
+      timestamp
+        /* "code.sol":2117:2144  block.timestamp <= deadline */
+      gt
+      iszero
+        /* "code.sol":2109:2145  require(block.timestamp <= deadline) */
+      iszero
+      iszero
+      tag_81
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_81:
+        /* "code.sol":4602:4603  1 */
+      0x1
+        /* "code.sol":4593:4599  _value */
+      dup4
+        /* "code.sol":4589:4590  2 */
+      0x2
+        /* "code.sol":4589:4599  2 * _value */
+      mul
+        /* "code.sol":4589:4603  2 * _value + 1 */
+      add
+        /* "code.sol":4573:4603  uint256 money = 2 * _value + 1 */
+      swap1
+      pop
+        /* "code.sol":4641:4646  money */
+      dup1
+        /* "code.sol":4618:4626  balances */
+      0x4
+        /* "code.sol":4618:4638  balances[msg.sender] */
+      0x0
+        /* "code.sol":4627:4637  msg.sender */
+      caller
+        /* "code.sol":4618:4638  balances[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":4618:4646  balances[msg.sender] < money */
+      lt
+        /* "code.sol":4618:4688  balances[msg.sender] < money || balances[_to] + money <= balances[_to] */
+      dup1
+      tag_83
+      jumpi
+      pop
+        /* "code.sol":4675:4683  balances */
+      0x4
+        /* "code.sol":4675:4688  balances[_to] */
+      0x0
+        /* "code.sol":4684:4687  _to */
+      dup6
+        /* "code.sol":4675:4688  balances[_to] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":4666:4671  money */
+      dup2
+        /* "code.sol":4650:4658  balances */
+      0x4
+        /* "code.sol":4650:4663  balances[_to] */
+      0x0
+        /* "code.sol":4659:4662  _to */
+      dup8
+        /* "code.sol":4650:4663  balances[_to] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":4650:4671  balances[_to] + money */
+      add
+        /* "code.sol":4650:4688  balances[_to] + money <= balances[_to] */
+      gt
+      iszero
+        /* "code.sol":4618:4688  balances[msg.sender] < money || balances[_to] + money <= balances[_to] */
+    tag_83:
+        /* "code.sol":4614:4727  if (balances[msg.sender] < money || balances[_to] + money <= balances[_to]) {... */
+      iszero
+      tag_84
+      jumpi
+        /* "code.sol":4711:4716  false */
+      0x0
+        /* "code.sol":4704:4716  return false */
+      swap2
+      pop
+      jump(tag_82)
+        /* "code.sol":4614:4727  if (balances[msg.sender] < money || balances[_to] + money <= balances[_to]) {... */
+    tag_84:
+        /* "code.sol":4749:4755  100000 */
+      0x186a0
+        /* "code.sol":4740:4746  _value */
+      dup4
+        /* "code.sol":4740:4755  _value < 100000 */
+      lt
+        /* "code.sol":4736:4905  if (_value < 100000) {... */
+      iszero
+      tag_85
+      jumpi
+        /* "code.sol":4776:4816  normal_transfer(msg.sender, _to, _value) */
+      0x469895c878a4b9152d5653a34bfe72e36c7d75d2168a1043870dbef09bc29efe
+        /* "code.sol":4792:4802  msg.sender */
+      caller
+        /* "code.sol":4804:4807  _to */
+      dup6
+        /* "code.sol":4809:4815  _value */
+      dup6
+        /* "code.sol":4776:4816  normal_transfer(msg.sender, _to, _value) */
+      mload(0x40)
+      dup1
+      dup5
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap4
+      pop
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log1
+        /* "code.sol":4736:4905  if (_value < 100000) {... */
+      jump(tag_86)
+    tag_85:
+        /* "code.sol":4852:4894  unnormal_transfer(msg.sender, _to, _value) */
+      0x73f1bc558cbed6e6e60759e4813e3b2203c6c5cf7a31d64a5fa7ff89887a26cb
+        /* "code.sol":4870:4880  msg.sender */
+      caller
+        /* "code.sol":4882:4885  _to */
+      dup6
+        /* "code.sol":4887:4893  _value */
+      dup6
+        /* "code.sol":4852:4894  unnormal_transfer(msg.sender, _to, _value) */
+      mload(0x40)
+      dup1
+      dup5
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap4
+      pop
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log1
+        /* "code.sol":4736:4905  if (_value < 100000) {... */
+    tag_86:
+        /* "code.sol":4914:4936  addToParticipants(_to) */
+      tag_87
+        /* "code.sol":4932:4935  _to */
+      dup5
+        /* "code.sol":4914:4931  addToParticipants */
+      tag_73
+        /* "code.sol":4914:4936  addToParticipants(_to) */
+      jump	// in
+    tag_87:
+      pop
+        /* "code.sol":4992:4998  _value */
+      dup3
+        /* "code.sol":4969:4977  balances */
+      0x4
+        /* "code.sol":4969:4989  balances[msg.sender] */
+      0x0
+        /* "code.sol":4978:4988  msg.sender */
+      caller
+        /* "code.sol":4969:4989  balances[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":4969:4998  balances[msg.sender] - _value */
+      sub
+        /* "code.sol":4946:4954  balances */
+      0x4
+        /* "code.sol":4946:4966  balances[msg.sender] */
+      0x0
+        /* "code.sol":4955:4965  msg.sender */
+      caller
+        /* "code.sol":4946:4966  balances[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "code.sol":4946:4998  balances[msg.sender] = balances[msg.sender] - _value */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "code.sol":5040:5046  _value */
+      dup3
+        /* "code.sol":5024:5032  balances */
+      0x4
+        /* "code.sol":5024:5037  balances[_to] */
+      0x0
+        /* "code.sol":5033:5036  _to */
+      dup7
+        /* "code.sol":5024:5037  balances[_to] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":5024:5046  balances[_to] + _value */
+      add
+        /* "code.sol":5008:5016  balances */
+      0x4
+        /* "code.sol":5008:5021  balances[_to] */
+      0x0
+        /* "code.sol":5017:5020  _to */
+      dup7
+        /* "code.sol":5008:5021  balances[_to] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "code.sol":5008:5046  balances[_to] = balances[_to] + _value */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "code.sol":5086:5089  _to */
+      dup4
+        /* "code.sol":5062:5098  LogTransfer(msg.sender, _to, _value) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":5074:5084  msg.sender */
+      caller
+        /* "code.sol":5062:5098  LogTransfer(msg.sender, _to, _value) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xa85107a334eae0d22d21cdf13af0f8e8125039ec60baaa843d2c4c5b0680174
+        /* "code.sol":5091:5097  _value */
+      dup6
+        /* "code.sol":5062:5098  LogTransfer(msg.sender, _to, _value) */
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "code.sol":5109:5128  determineNewShark() */
+      tag_88
+        /* "code.sol":5109:5126  determineNewShark */
+      tag_78
+        /* "code.sol":5109:5128  determineNewShark() */
+      jump	// in
+    tag_88:
+        /* "code.sol":5146:5150  true */
+      0x1
+        /* "code.sol":5139:5150  return true */
+      swap2
+      pop
+        /* "code.sol":2155:2156  _ */
+    tag_82:
+        /* "code.sol":4471:5157  function transfer(address _to, uint256 _value) public onlyWhileOpen returns (bool success) {... */
+      pop
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "code.sol":3171:3205  address[] public participantsArray */
+    tag_57:
+      0x6
+      dup2
+      dup2
+      sload
+      dup2
+      lt
+      iszero
+      iszero
+      tag_89
+      jumpi
+      invalid
+    tag_89:
+      swap1
+      0x0
+      mstore
+      keccak256(0x0, 0x20)
+      add
+      0x0
+      swap2
+      pop
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      jump	// out
+        /* "code.sol":5769:5943  function isShark(address _address) public view returns (bool success) {... */
+    tag_60:
+        /* "code.sol":5825:5837  bool success */
+      0x0
+        /* "code.sol":5869:5877  _address */
+      dup2
+        /* "code.sol":5853:5877  currentShark == _address */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":5853:5865  currentShark */
+      0x2
+      0x1
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":5853:5877  currentShark == _address */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+        /* "code.sol":5849:5915  if (currentShark == _address) {... */
+      iszero
+      tag_92
+      jumpi
+        /* "code.sol":5900:5904  true */
+      0x1
+        /* "code.sol":5893:5904  return true */
+      swap1
+      pop
+      jump(tag_91)
+        /* "code.sol":5849:5915  if (currentShark == _address) {... */
+    tag_92:
+        /* "code.sol":5931:5936  false */
+      0x0
+        /* "code.sol":5924:5936  return false */
+      swap1
+      pop
+        /* "code.sol":5769:5943  function isShark(address _address) public view returns (bool success) {... */
+    tag_91:
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "code.sol":1831:2019  function transferOwnership(address newOwner) public onlyOwner {... */
+    tag_63:
+        /* "code.sol":1931:1932  0 */
+      0x0
+        /* "code.sol":1911:1933  newOwner != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":1911:1919  newOwner */
+      dup2
+        /* "code.sol":1911:1933  newOwner != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+      iszero
+        /* "code.sol":1903:1934  require(newOwner != address(0)) */
+      iszero
+      iszero
+      tag_95
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_95:
+        /* "code.sol":1977:1985  newOwner */
+      dup1
+        /* "code.sol":1949:1986  OwnershipTransferred(owner, newOwner) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":1970:1975  owner */
+      0x0
+      dup1
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":1949:1986  OwnershipTransferred(owner, newOwner) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0
+      mload(0x40)
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "code.sol":2004:2012  newOwner */
+      dup1
+        /* "code.sol":1996:2001  owner */
+      0x0
+      dup1
+        /* "code.sol":1996:2012  owner = newOwner */
+      0x100
+      exp
+      dup2
+      sload
+      dup2
+      0xffffffffffffffffffffffffffffffffffffffff
+      mul
+      not
+      and
+      swap1
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      mul
+      or
+      swap1
+      sstore
+      pop
+        /* "code.sol":1831:2019  function transferOwnership(address newOwner) public onlyOwner {... */
+      pop
+      jump	// out
+        /* "code.sol":4199:4465  function addToParticipants(address _address) internal returns (bool success) {... */
+    tag_73:
+        /* "code.sol":4262:4274  bool success */
+      0x0
+        /* "code.sol":4290:4305  participantsMap */
+      0x5
+        /* "code.sol":4290:4315  participantsMap[_address] */
+      0x0
+        /* "code.sol":4306:4314  _address */
+      dup4
+        /* "code.sol":4290:4315  participantsMap[_address] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      0x0
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xff
+      and
+        /* "code.sol":4286:4354  if (participantsMap[_address]) {... */
+      iszero
+      tag_97
+      jumpi
+        /* "code.sol":4338:4343  false */
+      0x0
+        /* "code.sol":4331:4343  return false */
+      swap1
+      pop
+      jump(tag_96)
+        /* "code.sol":4286:4354  if (participantsMap[_address]) {... */
+    tag_97:
+        /* "code.sol":4391:4395  true */
+      0x1
+        /* "code.sol":4363:4378  participantsMap */
+      0x5
+        /* "code.sol":4363:4388  participantsMap[_address] */
+      0x0
+        /* "code.sol":4379:4387  _address */
+      dup5
+        /* "code.sol":4363:4388  participantsMap[_address] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      0x0
+        /* "code.sol":4363:4395  participantsMap[_address] = true */
+      0x100
+      exp
+      dup2
+      sload
+      dup2
+      0xff
+      mul
+      not
+      and
+      swap1
+      dup4
+      iszero
+      iszero
+      mul
+      or
+      swap1
+      sstore
+      pop
+        /* "code.sol":4405:4422  participantsArray */
+      0x6
+        /* "code.sol":4428:4436  _address */
+      dup3
+        /* "code.sol":4405:4437  participantsArray.push(_address) */
+      swap1
+      dup1
+        /* "--CODEGEN--":39:40   */
+      0x1
+        /* "--CODEGEN--":33:36   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      sload
+        /* "--CODEGEN--":23:41   */
+      add
+        /* "--CODEGEN--":57:67   */
+      dup1
+        /* "--CODEGEN--":52:55   */
+      dup3
+        /* "--CODEGEN--":45:68   */
+      sstore
+        /* "--CODEGEN--":79:89   */
+      dup1
+        /* "--CODEGEN--":72:89   */
+      swap2
+      pop
+        /* "--CODEGEN--":0:93   */
+      pop
+        /* "code.sol":4405:4437  participantsArray.push(_address) */
+      swap1
+      0x1
+      dup3
+      sub
+      swap1
+      0x0
+      mstore
+      keccak256(0x0, 0x20)
+      add
+      0x0
+      swap1
+      swap2
+      swap3
+      swap1
+      swap2
+      swap1
+      swap2
+      0x100
+      exp
+      dup2
+      sload
+      dup2
+      0xffffffffffffffffffffffffffffffffffffffff
+      mul
+      not
+      and
+      swap1
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      mul
+      or
+      swap1
+      sstore
+      pop
+      pop
+        /* "code.sol":4454:4458  true */
+      0x1
+        /* "code.sol":4447:4458  return true */
+      swap1
+      pop
+        /* "code.sol":4199:4465  function addToParticipants(address _address) internal returns (bool success) {... */
+    tag_96:
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "code.sol":1011:1154  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+    tag_75:
+        /* "code.sol":1069:1076  uint256 */
+      0x0
+        /* "code.sol":1088:1097  uint256 c */
+      dup1
+        /* "code.sol":1104:1105  b */
+      dup3
+        /* "code.sol":1100:1101  a */
+      dup5
+        /* "code.sol":1100:1105  a + b */
+      add
+        /* "code.sol":1088:1105  uint256 c = a + b */
+      swap1
+      pop
+        /* "code.sol":1127:1128  a */
+      dup4
+        /* "code.sol":1122:1123  c */
+      dup2
+        /* "code.sol":1122:1128  c >= a */
+      lt
+      iszero
+        /* "code.sol":1115:1129  assert(c >= a) */
+      iszero
+      iszero
+      tag_100
+      jumpi
+      invalid
+    tag_100:
+        /* "code.sol":1146:1147  c */
+      dup1
+        /* "code.sol":1139:1147  return c */
+      swap2
+      pop
+        /* "code.sol":1011:1154  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+      pop
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "code.sol":3726:4193  function determineNewShark() internal {... */
+    tag_78:
+        /* "code.sol":3774:3787  address shark */
+      0x0
+        /* "code.sol":3820:3836  uint arrayLength */
+      dup1
+        /* "code.sol":3878:3884  uint i */
+      0x0
+        /* "code.sol":3790:3807  participantsArray */
+      0x6
+        /* "code.sol":3808:3809  0 */
+      0x0
+        /* "code.sol":3790:3810  participantsArray[0] */
+      dup2
+      sload
+      dup2
+      lt
+      iszero
+      iszero
+      tag_102
+      jumpi
+      invalid
+    tag_102:
+      swap1
+      0x0
+      mstore
+      keccak256(0x0, 0x20)
+      add
+      0x0
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":3774:3810  address shark = participantsArray[0] */
+      swap3
+      pop
+        /* "code.sol":3839:3856  participantsArray */
+      0x6
+        /* "code.sol":3839:3863  participantsArray.length */
+      dup1
+      sload
+      swap1
+      pop
+        /* "code.sol":3820:3863  uint arrayLength = participantsArray.length */
+      swap2
+      pop
+        /* "code.sol":3887:3888  1 */
+      0x1
+        /* "code.sol":3878:3888  uint i = 1 */
+      swap1
+      pop
+        /* "code.sol":3873:4051  for (uint i = 1; i < arrayLength; i++) {... */
+    tag_104:
+        /* "code.sol":3894:3905  arrayLength */
+      dup2
+        /* "code.sol":3890:3891  i */
+      dup2
+        /* "code.sol":3890:3905  i < arrayLength */
+      lt
+        /* "code.sol":3873:4051  for (uint i = 1; i < arrayLength; i++) {... */
+      iszero
+      tag_105
+      jumpi
+        /* "code.sol":3948:3956  balances */
+      0x4
+        /* "code.sol":3948:3978  balances[participantsArray[i]] */
+      0x0
+        /* "code.sol":3957:3974  participantsArray */
+      0x6
+        /* "code.sol":3975:3976  i */
+      dup4
+        /* "code.sol":3957:3977  participantsArray[i] */
+      dup2
+      sload
+      dup2
+      lt
+      iszero
+      iszero
+      tag_107
+      jumpi
+      invalid
+    tag_107:
+      swap1
+      0x0
+      mstore
+      keccak256(0x0, 0x20)
+      add
+      0x0
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":3948:3978  balances[participantsArray[i]] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":3930:3938  balances */
+      0x4
+        /* "code.sol":3930:3945  balances[shark] */
+      0x0
+        /* "code.sol":3939:3944  shark */
+      dup6
+        /* "code.sol":3930:3945  balances[shark] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":3930:3978  balances[shark] < balances[participantsArray[i]] */
+      lt
+        /* "code.sol":3926:4041  if (balances[shark] < balances[participantsArray[i]]) {... */
+      iszero
+      tag_109
+      jumpi
+        /* "code.sol":4006:4023  participantsArray */
+      0x6
+        /* "code.sol":4024:4025  i */
+      dup2
+        /* "code.sol":4006:4026  participantsArray[i] */
+      dup2
+      sload
+      dup2
+      lt
+      iszero
+      iszero
+      tag_110
+      jumpi
+      invalid
+    tag_110:
+      swap1
+      0x0
+      mstore
+      keccak256(0x0, 0x20)
+      add
+      0x0
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":3998:4026  shark = participantsArray[i] */
+      swap3
+      pop
+        /* "code.sol":3926:4041  if (balances[shark] < balances[participantsArray[i]]) {... */
+    tag_109:
+        /* "code.sol":3907:3910  i++ */
+      dup1
+      dup1
+      0x1
+      add
+      swap2
+      pop
+      pop
+        /* "code.sol":3873:4051  for (uint i = 1; i < arrayLength; i++) {... */
+      jump(tag_104)
+    tag_105:
+        /* "code.sol":4081:4086  shark */
+      dup3
+        /* "code.sol":4065:4086  currentShark != shark */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":4065:4077  currentShark */
+      0x2
+      0x1
+      swap1
+      sload
+      swap1
+      0x100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "code.sol":4065:4086  currentShark != shark */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+      iszero
+        /* "code.sol":4061:4187  if (currentShark != shark) {... */
+      iszero
+      tag_112
+      jumpi
+        /* "code.sol":4117:4122  shark */
+      dup3
+        /* "code.sol":4102:4114  currentShark */
+      0x2
+      0x1
+        /* "code.sol":4102:4122  currentShark = shark */
+      0x100
+      exp
+      dup2
+      sload
+      dup2
+      0xffffffffffffffffffffffffffffffffffffffff
+      mul
+      not
+      and
+      swap1
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      mul
+      or
+      swap1
+      sstore
+      pop
+        /* "code.sol":4153:4158  shark */
+      dup3
+        /* "code.sol":4141:4176  LogNewShark(shark, balances[shark]) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0x9661a8ace6b3cd1f1b3281430248c132367a4ec5af504691598faa5eafdc848
+        /* "code.sol":4160:4168  balances */
+      0x4
+        /* "code.sol":4160:4175  balances[shark] */
+      0x0
+        /* "code.sol":4169:4174  shark */
+      dup7
+        /* "code.sol":4160:4175  balances[shark] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "code.sol":4141:4176  LogNewShark(shark, balances[shark]) */
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log2
+        /* "code.sol":4061:4187  if (currentShark != shark) {... */
+    tag_112:
+        /* "code.sol":3726:4193  function determineNewShark() internal {... */
+      pop
+      pop
+      pop
+      jump	// out
+
+    auxdata: 0xa165627a7a72305820af9af160c15b528dacaa6338315dc95b624501a59defbe90ec40e379a1aff1340029
+}

@@ -31,14 +31,14 @@ contract('FishToken', async (accounts) => {
 
         await instance.transfer(accounts[1], 20000, {from: accounts[3]});
 
-        result = await instance.balanceOf(accounts[3]);
-        console.log(result.toString());
-
         result = await instance.balanceOf(accounts[1]);
-        console.log(result.toString());
+        console.log("accounts[1]_balance : " + result.toString());
 
         result = await instance.balanceOf(accounts[2]);
-        console.log(result.toString());
+        console.log("accounts[2]_balance : " + result.toString());
+
+        result = await instance.balanceOf(accounts[3]);
+        console.log("accounts[3]_balance : " + result.toString());
 
         result = await instance.balanceOf(accounts[4]);
         console.log(result.toString());
@@ -51,16 +51,17 @@ contract('FishToken', async (accounts) => {
 
     it('unnormal_transfer', async () => {
 
-        console.log("Before unnormal_transfer");
+        console.log("----------------Before unnormal_transfer----------------");
         result = await instance.balanceOf(accounts[1]);
         console.log("account[1]_balance : " + result.toString());
         result = await instance.balanceOf(accounts[3]);
         console.log("account[3]_balance : " + result.toString());
 
         await instance.transfer(accounts[1], bigValue, {from: accounts[3]});
+
         result = await instance.balanceOf(accounts[3]);
 
-        console.log("After unnormal_transfer");
+        console.log("----------------After unnormal_transfer-----------------");
         result = await instance.balanceOf(accounts[1]);
         console.log("account[1]_balance : " + result.toString());
         result = await instance.balanceOf(accounts[3]);

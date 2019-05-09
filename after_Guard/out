@@ -1,0 +1,76 @@
+Using network 'test'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+[0m[0m
+[0m  Contract: FishToken[0m
+contract_name:FishToken:0xb47C190264F73a96E2bd7461fBc89559FDa205B2
+contract_name:attacker:0x8D11BB1e4D8DD574cE396Ef24e1f5F545326C9F1
+  [31m  1) test 0[0m
+    > No events were emitted
+Before unnormal_transfer
+account[1]_balance : 0
+account[3]_balance : 0
+After unnormal_transfer
+account[1]_balance : 0
+account[3]_balance : 0
+  [32m  ✓[0m[90m unnormal_transfer[0m[31m (217ms)[0m
+0
+  [31m  2) attack_Re_entry[0m
+    > No events were emitted
+before_owner:0x01D2A16a9a2E1Fa7c352e252ff95Ab15B2F0F6F5
+  [31m  3) change_Owner[0m
+    > No events were emitted
+
+
+[92m [0m[32m 1 passing[0m[90m (2s)[0m
+[31m  3 failing[0m
+
+[0m  1) Contract: FishToken
+       test 0:
+[0m[31m     Error: Returned error: VM Exception while processing transaction: revert[0m[90m
+      at Object.ErrorResponse (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth/~/web3-core-helpers/src/errors.js:29:1)
+      at /usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth/~/web3-core-requestmanager/src/index.js:140:1
+      at /usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-provider/wrapper.js:112:1
+      at XMLHttpRequest.request.onreadystatechange (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3/~/web3-providers-http/src/index.js:96:1)
+      at XMLHttpRequestEventTarget.dispatchEvent (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request-event-target.js:34:1)
+      at XMLHttpRequest._setReadyState (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request.js:208:1)
+      at XMLHttpRequest._onHttpResponseEnd (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request.js:318:1)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request.js:289:47)
+      at endReadableNT (_stream_readable.js:1129:12)
+      at processTicksAndRejections (internal/process/next_tick.js:76:17)
+[0m
+[0m  2) Contract: FishToken
+       attack_Re_entry:
+[0m[31m     Error: Returned error: VM Exception while processing transaction: revert[0m[90m
+      at Object.ErrorResponse (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth/~/web3-core-helpers/src/errors.js:29:1)
+      at /usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth/~/web3-core-requestmanager/src/index.js:140:1
+      at /usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-provider/wrapper.js:112:1
+      at XMLHttpRequest.request.onreadystatechange (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3/~/web3-providers-http/src/index.js:96:1)
+      at XMLHttpRequestEventTarget.dispatchEvent (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request-event-target.js:34:1)
+      at XMLHttpRequest._setReadyState (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request.js:208:1)
+      at XMLHttpRequest._onHttpResponseEnd (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request.js:318:1)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request.js:289:47)
+      at endReadableNT (_stream_readable.js:1129:12)
+      at processTicksAndRejections (internal/process/next_tick.js:76:17)
+[0m
+[0m  3) Contract: FishToken
+       change_Owner:
+[0m[31m     Error: Returned error: VM Exception while processing transaction: out of gas[0m[90m
+      at Object.ErrorResponse (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth/~/web3-core-helpers/src/errors.js:29:1)
+      at /usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth/~/web3-core-requestmanager/src/index.js:140:1
+      at /usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-provider/wrapper.js:112:1
+      at XMLHttpRequest.request.onreadystatechange (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3/~/web3-providers-http/src/index.js:96:1)
+      at XMLHttpRequestEventTarget.dispatchEvent (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request-event-target.js:34:1)
+      at XMLHttpRequest._setReadyState (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request.js:208:1)
+      at XMLHttpRequest._onHttpResponseEnd (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request.js:318:1)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/truffle/build/webpack:/~/xhr2-cookies/dist/xml-http-request.js:289:47)
+      at endReadableNT (_stream_readable.js:1129:12)
+      at processTicksAndRejections (internal/process/next_tick.js:76:17)
+[0m
+
+
