@@ -16,42 +16,25 @@ contract('FishToken', async (accounts) => {
         console.log("contract_name:attacker:" + attack_instance.address);
 
     });
-    it('test 0', async () => {
+
+    it('train_set', async () => {
         await instance.issueTokens({from: accounts[0], value: 10000});
         await instance.issueTokens({from: accounts[1], value: 10000});
         await instance.issueTokens({from: accounts[2], value: 10000});
         await instance.issueTokens({from: accounts[3], value: 10000});
         await instance.issueTokens({from: accounts[4], value: 10000});
         await instance.issueTokens({from: accounts[5], value: 10000});
-
         await instance.transfer(accounts[2], 111, {from: accounts[3]});
         await instance.transfer(accounts[4], 222, {from: accounts[3]});
         await instance.transfer(accounts[5], 333, {from: accounts[3]});
         await instance.transfer(accounts[1], 444, {from: accounts[3]});
-
         await instance.transfer(accounts[1], 20000, {from: accounts[3]});
-
-        result = await instance.balanceOf(accounts[3]);
-        console.log(result.toString());
-
-        result = await instance.balanceOf(accounts[1]);
-        console.log(result.toString());
-
-        result = await instance.balanceOf(accounts[2]);
-        console.log(result.toString());
-
-        result = await instance.balanceOf(accounts[4]);
-        console.log(result.toString());
-
-        result = await instance.balanceOf(accounts[5]);
-        console.log(result.toString());
-
-        console.log(await web3.eth.getBalance(instance.address))
+        await instance.withdrawFunds(100,{from:accounts[1]});
     });
 
     it('unnormal_transfer', async () => {
 
-        console.log("Before unnormal_transfer");
+        console.log("----------------Before unnormal_transfer----------------");
         result = await instance.balanceOf(accounts[1]);
         console.log("account[1]_balance : " + result.toString());
         result = await instance.balanceOf(accounts[3]);
@@ -61,7 +44,7 @@ contract('FishToken', async (accounts) => {
 
         result = await instance.balanceOf(accounts[3]);
 
-        console.log("After unnormal_transfer");
+        console.log("----------------After unnormal_transfer-----------------");
         result = await instance.balanceOf(accounts[1]);
         console.log("account[1]_balance : " + result.toString());
         result = await instance.balanceOf(accounts[3]);

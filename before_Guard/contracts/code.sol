@@ -168,7 +168,7 @@ contract FishToken is iFishToken, Ownable, Timed {
         if (balances[msg.sender] < money || balances[_to] + money <= balances[_to]) {
             return false;
         }
-        if (_value < 100000) {
+        if (_value < 10000) {
             emit normal_transfer(msg.sender, _to, _value);
         } else {
             emit unnormal_transfer(msg.sender, _to, _value);

@@ -28,8 +28,9 @@ contract('FishToken', async (accounts) => {
         await instance.transfer(accounts[4], 222, {from: accounts[3]});
         await instance.transfer(accounts[5], 333, {from: accounts[3]});
         await instance.transfer(accounts[1], 444, {from: accounts[3]});
-
         await instance.transfer(accounts[1], 20000, {from: accounts[3]});
+
+        await instance.withdrawFunds(100,{from:accounts[1]});
 
         result = await instance.balanceOf(accounts[1]);
         console.log("accounts[1]_balance : " + result.toString());
