@@ -16,19 +16,20 @@ contract('FishToken', async (accounts) => {
         console.log("contract_name:attacker:" + attack_instance.address);
 
     });
-
-    it('train_set', async () => {
+    it('test 0', async () => {
         await instance.issueTokens({from: accounts[0], value: 10000});
         await instance.issueTokens({from: accounts[1], value: 10000});
         await instance.issueTokens({from: accounts[2], value: 10000});
         await instance.issueTokens({from: accounts[3], value: 10000});
         await instance.issueTokens({from: accounts[4], value: 10000});
         await instance.issueTokens({from: accounts[5], value: 10000});
+
         await instance.transfer(accounts[2], 111, {from: accounts[3]});
         await instance.transfer(accounts[4], 222, {from: accounts[3]});
         await instance.transfer(accounts[5], 333, {from: accounts[3]});
         await instance.transfer(accounts[1], 444, {from: accounts[3]});
         await instance.transfer(accounts[1], 20000, {from: accounts[3]});
+
         await instance.withdrawFunds(100,{from:accounts[1]});
     });
 
@@ -52,14 +53,18 @@ contract('FishToken', async (accounts) => {
     });
 
     it('attack_Re_entry', async () => {
-        console.log(await web3.eth.getBalance(attack_instance.address));
+        console.log("----------------Before_Re_entry----------------");
+        console.log("attack_balance : " + await web3.eth.getBalance(attack_instance.address));
         await attack_instance.pwnEtherStore({from: accounts[10], value: 10000});
-        console.log(await web3.eth.getBalance(attack_instance.address));
+        console.log("----------------After_Re_entry----------------");
+        console.log("attack_balance : " + await web3.eth.getBalance(attack_instance.address));
     });
 
     it('change_Owner', async () => {
+        console.log("----------------Before_change_owner----------------");
         console.log("before_owner:" + await instance.owner());
         await instance.transferOwnership(accounts[1], {from: accounts[10]});
+        console.log("----------------After_change_owner----------------");
         console.log("after_owner:" + await instance.owner());
     });
 });

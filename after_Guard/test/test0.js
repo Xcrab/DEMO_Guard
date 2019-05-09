@@ -31,23 +31,6 @@ contract('FishToken', async (accounts) => {
         await instance.transfer(accounts[1], 20000, {from: accounts[3]});
 
         await instance.withdrawFunds(100,{from:accounts[1]});
-
-        result = await instance.balanceOf(accounts[1]);
-        console.log("accounts[1]_balance : " + result.toString());
-
-        result = await instance.balanceOf(accounts[2]);
-        console.log("accounts[2]_balance : " + result.toString());
-
-        result = await instance.balanceOf(accounts[3]);
-        console.log("accounts[3]_balance : " + result.toString());
-
-        result = await instance.balanceOf(accounts[4]);
-        console.log(result.toString());
-
-        result = await instance.balanceOf(accounts[5]);
-        console.log(result.toString());
-
-        console.log(await web3.eth.getBalance(instance.address))
     });
 
     it('unnormal_transfer', async () => {
@@ -70,14 +53,18 @@ contract('FishToken', async (accounts) => {
     });
 
     it('attack_Re_entry', async () => {
-        console.log(await web3.eth.getBalance(attack_instance.address));
+        console.log("----------------Before_Re_entry----------------");
+        console.log("attack_balance : " + await web3.eth.getBalance(attack_instance.address));
         await attack_instance.pwnEtherStore({from: accounts[10], value: 10000});
-        console.log(await web3.eth.getBalance(attack_instance.address));
+        console.log("----------------After_Re_entry----------------");
+        console.log("attack_balance : " + await web3.eth.getBalance(attack_instance.address));
     });
 
     it('change_Owner', async () => {
+        console.log("----------------Before_change_owner----------------");
         console.log("before_owner:" + await instance.owner());
         await instance.transferOwnership(accounts[1], {from: accounts[10]});
+        console.log("----------------After_change_owner----------------");
         console.log("after_owner:" + await instance.owner());
     });
 });
